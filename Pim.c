@@ -10,15 +10,14 @@ Created by: Filipe Sandes.*/
 void entrada1(int* ingresso, int opcao){
 
     printf("\t________________________________________________\n\n");
-    printf("\t-Tem direito a Meia-entrada as seguintes opções:\n");
+    printf("\t-Opções de ingrsso:\n");
     // Declarando opçoes
-    printf("\t| [1] Crianças entre 02 e 12 anos.\n");
-    printf("\t| [2] Adultos a partir de 60 anos.\n");
-    printf("\t| [3] Estudantes.\n");
-    printf("\t| [4] Professores da rede Pública de Ensino.\n");
-    printf("\t| Caso não tenha direito a desconto, digite [5].\n");
-    printf("\t________________________________________________\n");
-
+    printf("\t| [1] Inteira.\n");
+    printf("\t| [2] Meia-Entrada*.\n");
+    printf("\t| [3] Entrada Franca**.\n");
+    printf("\t________________________________________________\n\n");
+    printf("*Meia-Entrada: Crianças de 02 a 12 anos, estudantes, adultos a partir de 60 anos e professores da rede pública de ensino\n");
+    printf("**Entrada Franca: Às terças-feiras para crianças carentes da rede pública de encino \n\n");
     // Inicio do laço de repetiçao "Do / While" para opçoes INVALIDAS
     do{
     printf("\n\tInforme sua opção: ");
@@ -30,72 +29,78 @@ void entrada1(int* ingresso, int opcao){
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tO Fantasma da Ópera\n");
             printf("\tSab - 01 dec - 21h\n");
-            printf("\tDesconto para Crianças entre 02 e 12 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t__________________________________________\n");
+            printf("\tInteira.\n");
+            printf("\tValor do ingresso: R$30,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 2:
+            case 2:
             system("cls");
             printf("\t__________________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tO Fantasma da Ópera\n");
             printf("\tSab - 01 dec - 21h\n");
-            printf("\tDesconto para Adultos a partir de 60 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
+            printf("\tMeia-Eatrada.\n");
+            printf("\tValor do ingresso: R$15,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
+            break;
+            case 3:
+            system("cls");
             printf("\t__________________________________________\n");
-            break;
-        case 3:
-            system("cls");
-            printf("\t_____________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tO Fantasma da Ópera\n");
             printf("\tSab - 01 dec - 21h\n");
-            printf("\tDesconto para Estudantes.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
+            printf("\tEntrada Franca.\n");
+            printf("\tValor do ingresso: Gratuito\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 4:
-            system("cls");
-            printf("\t____________________________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tO Fantasma da Ópera\n");
-            printf("\tSab - 01 dec - 21h\n");
-            printf("\tDesconto para Professores da rede Publica de Ensino.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t____________________________________________________\n");
-            break;
-        case 5:
-            system("cls");
-            printf("\t_____________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tO Fantasma da Ópera\n");
-            printf("\tSab - 01 dec - 21h\n");
-            printf("\tIgresso integral.\n");
-            printf("\tO valor do ingresso: R$30,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
-            break;
-        default:
-            printf("\tOpção Invalida.");      // "Default" finalizando Switch case
-        }
-    }while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5);     // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
+            default:    // "Default" finalizando Switch case
+                printf("\tOPÇÃO INVALIDA!");}
+}while(opcao != 1 && opcao != 2 && opcao != 3); // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
 }
 void entrada2(int* ingresso, int opcao){
 
     printf("\t________________________________________________\n\n");
-    printf("\t-Tem direito a Meia-entrada as seguintes opções:\n");
+    printf("\t-Opções de ingrsso:\n");
     // Declarando opçoes
-    printf("\t| [1] Crianças entre 02 e 12 anos.\n");
-    printf("\t| [2] Adultos a partir de 60 anos.\n");
-    printf("\t| [3] Estudantes.\n");
-    printf("\t| [4] Professores da rede Pública de Ensino.\n");
-    printf("\t| Caso não tenha direito a desconto, digite [5].\n");
-    printf("\t________________________________________________\n");
-
+    printf("\t| [1] Inteira.\n");
+    printf("\t| [2] Meia-Entrada*.\n");
+    printf("\t| [3] Entrada Franca**.\n");
+    printf("\t________________________________________________\n\n");
+    printf("*Meia-Entrada: Crianças de 02 a 12 anos, estudantes, adultos a partir de 60 anos e professores da rede pública de ensino\n");
+    printf("**Entrada Franca: Às terças-feiras para crianças carentes da rede pública de encino \n\n");
     // Inicio do laço de repetiçao "Do / While" para opçoes INVALIDAS
     do{
     printf("\n\tInforme sua opção: ");
@@ -107,72 +112,78 @@ void entrada2(int* ingresso, int opcao){
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tDeath of a Salesman\n");
             printf("\tSab - 01 dec - 23h\n");
-            printf("\tDesconto para Crianças entre 02 e 12 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t__________________________________________\n");
+            printf("\tInteira.\n");
+            printf("\tValor do ingresso: R$30,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 2:
+            case 2:
             system("cls");
             printf("\t__________________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tDeath of a Salesman\n");
             printf("\tSab - 01 dec - 23h\n");
-            printf("\tDesconto para Adultos a partir de 60 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
+            printf("\tMeia-Eatrada.\n");
+            printf("\tValor do ingresso: R$15,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
+            break;
+            case 3:
+            system("cls");
             printf("\t__________________________________________\n");
-            break;
-        case 3:
-            system("cls");
-            printf("\t_____________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tDeath of a Salesman\n");
             printf("\tSab - 01 dec - 23h\n");
-            printf("\tDesconto para Estudantes.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
+            printf("\tEntrada Franca.\n");
+            printf("\tValor do ingresso: Gratuito\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 4:
-            system("cls");
-            printf("\t____________________________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tDeath of a Salesman\n");
-            printf("\tSab - 01 dec - 23h\n");
-            printf("\tDesconto para Professores da rede Publica de Ensino.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t____________________________________________________\n");
-            break;
-        case 5:
-            system("cls");
-            printf("\t_____________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tDeath of a Salesman\n");
-            printf("\tSab - 01 dec - 23h\n");
-            printf("\tIgresso integral.\n");
-            printf("\tO valor do ingresso: R$30,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
-            break;
-        default:
-            printf("\tOpção Invalida.");      // "Default" finalizando Switch case
-        }
-    }while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5);     // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
+            default:    // "Default" finalizando Switch case
+                printf("\tOPÇÃO INVALIDA!");}
+}while(opcao != 1 && opcao != 2 && opcao != 3); // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
 }
 void entrada3(int* ingresso, int opcao){
 
     printf("\t________________________________________________\n\n");
-    printf("\t-Tem direito a Meia-entrada as seguintes opções:\n");
+    printf("\t-Opções de ingrsso:\n");
     // Declarando opçoes
-    printf("\t| [1] Crianças entre 02 e 12 anos.\n");
-    printf("\t| [2] Adultos a partir de 60 anos.\n");
-    printf("\t| [3] Estudantes.\n");
-    printf("\t| [4] Professores da rede Pública de Ensino.\n");
-    printf("\t| Caso não tenha direito a desconto, digite [5].\n");
-    printf("\t________________________________________________\n");
-
+    printf("\t| [1] Inteira.\n");
+    printf("\t| [2] Meia-Entrada*.\n");
+    printf("\t| [3] Entrada Franca**.\n");
+    printf("\t________________________________________________\n\n");
+    printf("*Meia-Entrada: Crianças de 02 a 12 anos, estudantes, adultos a partir de 60 anos e professores da rede pública de ensino\n");
+    printf("**Entrada Franca: Às terças-feiras para crianças carentes da rede pública de encino \n\n");
     // Inicio do laço de repetiçao "Do / While" para opçoes INVALIDAS
     do{
     printf("\n\tInforme sua opção: ");
@@ -184,64 +195,70 @@ void entrada3(int* ingresso, int opcao){
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tMacbeth\n");
             printf("\tDom - 02 dec - 22h\n");
-            printf("\tDesconto para Crianças entre 02 e 12 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t__________________________________________\n");
+            printf("\tInteira.\n");
+            printf("\tValor do ingresso: R$30,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 2:
+            case 2:
             system("cls");
             printf("\t__________________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tMacbeth\n");
             printf("\tDom - 02 dec - 22h\n");
-            printf("\tDesconto para Adultos a partir de 60 anos.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
+            printf("\tMeia-Eatrada.\n");
+            printf("\tValor do ingresso: R$15,00\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
+            break;
+            case 3:
+            system("cls");
             printf("\t__________________________________________\n");
-            break;
-        case 3:
-            system("cls");
-            printf("\t_____________________________________\n");
             printf("\n\tPEÇA TEATRAL\n");
             printf("\tMacbeth\n");
             printf("\tDom - 02 dec - 22h\n");
-            printf("\tDesconto para Estudantes.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
+            printf("\tEntrada Franca.\n");
+            printf("\tValor do ingresso: Gratuito\n");
+            printf("\t__________________________________________\n\n");
+            printf("\tDeseja confirmar a compra?\n\n\t[1] SIM\n\t[2] NAO\n\n");
+            printf("\tOpção escolhida: ");
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                printf("\n\tCOMPRA EFETUADA COM SUCESSO EM:\n\t%s  %s\n",__DATE__,__TIME__);
+                printf("\t__________________________________________\n\n");
+                break;
+                case 2:
+                printf("\n\tCOMPRA CANCELADA!\n");
+                printf("\t__________________________________________\n\n");}
             break;
-        case 4:
-            system("cls");
-            printf("\t____________________________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tMacbeth\n");
-            printf("\tDom - 02 dec - 22h\n");
-            printf("\tDesconto para Professores da rede Publica de Ensino.\n");
-            printf("\tO valor do ingresso: R$15,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t____________________________________________________\n");
-            break;
-        case 5:
-            system("cls");
-            printf("\t_____________________________________\n");
-            printf("\n\tPEÇA TEATRAL\n");
-            printf("\tMacbeth\n");
-            printf("\tDom - 02 dec - 22h\n");
-            printf("\tIgresso integral.\n");
-            printf("\tO valor do ingresso: R$30,00\n");
-            printf("\tCOMPRA EFETUADA EM:\n\t%s  %s\n",__DATE__,__TIME__);
-            printf("\t_____________________________________\n");
-            break;
-        default:
-            printf("\tOpção Invalida.");      // "Default" finalizando Switch case
-        }
-    }while(opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5);     // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
+            default:    // "Default" finalizando Switch case
+                printf("\tOPÇÃO INVALIDA!");}
+}while(opcao != 1 && opcao != 2 && opcao != 3); // "While" indicando quais opções não serão repetidas.(Se opçao invalida repete o laço ate ser digitado uma opção valida)
 }
 // Funçao principal
 int main(){
 setlocale(LC_ALL, "Portuguese");    //Para não ter erros de portugues
-
 
     int opcao;      // Variavel para opçoes
     int* ingresso;
